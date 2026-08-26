@@ -1,4 +1,6 @@
 .filters {
+  position: sticky;
+  top: 96px;
   flex: 0 0 360px;
   align-self: start;
   padding: 24px;
@@ -109,4 +111,10 @@
 }
 .clearButton:hover {
   border: 1px solid var(--green-hover);
+}
+
+@media (max-width: 680px) {
+  .filters {
+    position: static;
+  }
 }
