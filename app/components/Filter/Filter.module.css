@@ -1,24 +1,112 @@
 .filters {
-	flex: 0 0 360px;
-	align-self: start;
-	padding: 24px;
-	border: 1px solid var(--gray-light);
-	border-radius: 12px;
-	background: var(--inputs);
+  flex: 0 0 360px;
+  align-self: start;
+  padding: 24px;
+  border: 1px solid var(--gray-light);
+  border-radius: 12px;
+  background: var(--inputs);
 }
-.locationLabel, .groupTitle { display: block; margin-bottom: 8px; font-weight: 400; font-size: 16px; line-height: 1.5; color: var(--gray); }
-.filterLegend { font-weight: 600; font-size: 20px; line-height: 1.2; color: var(--main); }
-.locationField { display: flex; align-items: center; gap: 8px; height: 48px; padding: 0 16px; margin-bottom: 40px; border-radius: 10px; background: var(--white); color: var(--main); }
-.locationField input { width: 100%; border: 0; outline: 0; background: transparent; color: var(--main); }
-.icon { width: 16px; height: 16px; flex: 0 0 16px; fill: currentColor; }
-.locationFieldEmpty .icon { color: var(--gray); }
-.filterGroups { border: 0; }
-.groupTitle { margin-top: 24px; color: var(--gray); font-weight: 500; }
-.radioLabel { display: flex; align-items: center; gap: 8px; margin: 10px 0; font-weight: 400; font-size: 16px; line-height: 1.5; color: var(--main); }
-.radioLabel input { width: 24px; height: 24px; accent-color: var(--text); }
-.searchButton, .clearButton { width: 100%; height: 56px; margin-top: 24px; border-radius: 200px; padding: 16px 60px; font-weight: 500; font-size: 16px; line-height: 1.5; letter-spacing: -0.01em; }
-.searchButton { background: var(--grey-green); color: var(--white); }
-.searchButton:hover { background: var(--green-hover); }
-.clearButton { display: flex; align-items: center; justify-content: center; gap: 4px; margin-top: 16px; border: 1px solid var(--gray-light); background: var(--white); color: var(--main); }
-.clearButton .icon { width: 12px; height: 12px; flex-basis: 24px; fill: none; stroke: #000; }
-.clearButton:hover { border: 1px solid var(--green-hover); }
+.locationLabel,
+.groupTitle {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--gray);
+}
+.filterLegend {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  color: var(--main);
+}
+.locationField {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 48px;
+  padding: 0 16px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  background: var(--white);
+  color: var(--main);
+}
+.locationField input {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  color: var(--main);
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  flex: 0 0 16px;
+  fill: currentColor;
+}
+.locationFieldEmpty .icon {
+  color: var(--gray);
+}
+.filterGroups {
+  border: 0;
+}
+.groupTitle {
+  margin-top: 24px;
+  color: var(--gray);
+  font-weight: 500;
+}
+.radioLabel {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 10px 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--main);
+}
+.radioLabel input {
+  width: 24px;
+  height: 24px;
+  accent-color: var(--text);
+}
+.searchButton,
+.clearButton {
+  width: 100%;
+  height: 56px;
+  margin-top: 24px;
+  border-radius: 200px;
+  padding: 16px 60px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+}
+.searchButton {
+  background: var(--grey-green);
+  color: var(--white);
+}
+.searchButton:hover {
+  background: var(--green-hover);
+}
+.clearButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  margin-top: 16px;
+  border: 1px solid var(--gray-light);
+  background: var(--white);
+  color: var(--main);
+}
+.clearButton .icon {
+  width: 12px;
+  height: 12px;
+  flex-basis: 24px;
+  fill: none;
+  stroke: #000;
+}
+.clearButton:hover {
+  border: 1px solid var(--green-hover);
+}

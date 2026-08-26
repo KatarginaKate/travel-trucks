@@ -1,12 +1,8 @@
 import type { FormEvent } from "react";
+import type { FilterValues } from "../../types/camper";
 import styles from "./Filter.module.css";
 
-export type FilterValues = {
-	location: string;
-	form: string;
-	transmission: string;
-	engine: string;
-};
+export type { FilterValues } from "../../types/camper";
 
 type FilterProps = {
 	values: FilterValues;

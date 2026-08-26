@@ -1,20 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
+import type { Camper } from "../../types/camper";
 import styles from "./CamperCard.module.css";
 
-export type Camper = {
-	id: string;
-	name: string;
-	price: number;
-	rating: number;
-	location: string;
-	description: string;
-	form: string;
-	transmission: string;
-	engine: string;
-	coverImage: string;
-	totalReviews: number;
-};
+export type { Camper } from "../../types/camper";
 
 const formLabels: Record<string, string> = {
 	alcove: "Alcove",

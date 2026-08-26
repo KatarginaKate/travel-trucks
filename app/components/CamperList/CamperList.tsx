@@ -1,4 +1,5 @@
-import CamperCard, { Camper } from "../CamperCard/CamperCard";
+import CamperCard from "../CamperCard/CamperCard";
+import type { Camper } from "../../types/camper";
 import styles from "./CamperList.module.css";
 
 type CamperListProps = { campers: Camper[] };

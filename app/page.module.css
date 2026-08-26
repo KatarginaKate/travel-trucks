@@ -1,6 +1,6 @@
 .page {
 	min-height: 100svh;
-	color: #101828;
-	background: #f7f7f7;
+	color: var(--main);
+	background: var(--inputs);
 }
 
