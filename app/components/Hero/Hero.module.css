@@ -1,0 +1,80 @@
+.hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: calc(100svh - 72px);
+  overflow: hidden;
+  isolation: isolate;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.2)), url("/images/camper-hero.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.heroContent {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 64px, 1312px);
+  margin: 0 auto;
+  color: #fff;
+}
+
+.hero h1 {
+  max-width: 620px;
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 0, 67;
+  color: var(--inputs);
+  margin-bottom: 16px;
+}
+
+.description {
+  font-family: var(--font-family);
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.33;
+  color: var(--inputs);
+  margin-bottom: 40px;
+}
+
+.primaryButton {
+  border-radius: 200px;
+  padding: 16px 60px;
+  background: var(--grey-green);
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.01em;
+  color: var(--white);
+  transition:
+    background 180ms ease,
+    transform 180ms ease;
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible {
+  background:var(--green-hover);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 700px) {
+  .heroContent {
+    width: min(100% - 40px, 1312px);
+  }
+
+  .hero {
+    background-position: 62% center;
+  }
+
+  .hero h1 {
+    max-width: 360px;
+    font-size: 44px;
+  }
+
+  .description {
+    max-width: 280px;
+    font-size: 16px;
+  }
+}
