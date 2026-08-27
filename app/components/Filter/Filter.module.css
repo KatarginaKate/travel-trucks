@@ -41,14 +41,40 @@
   background: transparent;
   color: var(--main);
 }
+.locationField input::selection {
+  background: transparent;
+  color: var(--main);
+}
+:global(html.dark) .locationField input,
+:global(html.dark) .locationField input::selection {
+  color: #101828;
+}
+.locationField input:-webkit-autofill,
+.locationField input:-webkit-autofill:hover,
+.locationField input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--white) inset;
+  -webkit-text-fill-color: var(--main);
+  transition: background-color 9999s ease-out;
+}
+:global(html.dark) .locationField input:-webkit-autofill,
+:global(html.dark) .locationField input:-webkit-autofill:hover,
+:global(html.dark) .locationField input:-webkit-autofill:focus {
+  -webkit-text-fill-color: #101828;
+}
 .icon {
   width: 16px;
   height: 16px;
   flex: 0 0 16px;
   fill: currentColor;
 }
+.locationField .icon {
+  color: var(--main);
+}
 .locationFieldEmpty .icon {
   color: var(--gray);
+}
+:global(html.dark) .locationField:not(.locationFieldEmpty) .icon {
+  color: var(--gray-light);
 }
 .filterGroups {
   border: 0;
@@ -113,11 +139,15 @@
   border: 1px solid var(--green-hover);
 }
 :global(html.dark) .clearButton {
-  background: #f4f7f6;
-  color: #101828;
+  background: var(--inputs);
+  color: var(--main);
+  opacity: 1;
+  visibility: visible;
 }
 :global(html.dark) .clearButton .icon {
-  stroke: #101828;
+  stroke: var(--main);
+  opacity: 1;
+  visibility: visible;
 }
 
 @media (max-width: 680px) {
