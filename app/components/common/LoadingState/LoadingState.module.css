@@ -21,6 +21,9 @@
   text-align: center;
   box-shadow: 0 8px 24px rgba(16, 24, 40, 0.08);
 }
+:global(html.dark) .loadingState {
+  background: var(--inputs);
+}
 .loadingState h2 {
   margin-top: 32px;
   font-size: 24px;

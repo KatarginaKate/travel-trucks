@@ -111,6 +111,7 @@ app/
 ├── types/
 │   └── TypeScript domain types
 └── globals.css
+└── public
 ```
 
 ## 🔌 API Integration
@@ -127,14 +128,16 @@ Camper requests are implemented in:
 app/services/campers.ts
 ```
 
-### Endpoints
+### 🔌 Endpoints
 
-| Method | Endpoint                              | Description                   |
-| ------ | ------------------------------------- | ----------------------------- |
-| `GET`  | `/campers`                            | Fetch campers for the catalog |
-| `GET`  | `/campers/:camperId`                  | Fetch camper details          |
-| `GET`  | `/campers/:camperId/reviews`          | Fetch camper reviews          |
-| `POST` | `/campers/:camperId/booking-requests` | Submit a booking request      |
+| Method | Endpoint | Description |
+|:------:|----------|-------------|
+| `GET` | `/campers` | Fetch campers for the catalog |
+| `GET` | `/campers/filters` | Fetch available filters for camper |
+| `GET` | `/campers/:camperId` | Fetch camper details |
+| `GET` | `/campers/:camperId/reviews` | Fetch camper reviews |
+| `POST` | `/campers/:camperId/booking-requests` | Submit a booking request |
+
 
 ## 🎯 Key Implementation Details
 
