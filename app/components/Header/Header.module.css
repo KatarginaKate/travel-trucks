@@ -3,8 +3,8 @@
   top: 0;
   z-index: 20;
   height: 72px;
-  border-bottom: 1px solid #f2f4f7;
-  background: #f7f7f7;
+  border-bottom: 1px solid var(--gray-light);
+  background: var(--inputs);
 }
 
 .inner {

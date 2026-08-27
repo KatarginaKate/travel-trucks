@@ -112,6 +112,13 @@
 .clearButton:hover {
   border: 1px solid var(--green-hover);
 }
+:global(html.dark) .clearButton {
+  background: #f4f7f6;
+  color: #101828;
+}
+:global(html.dark) .clearButton .icon {
+  stroke: #101828;
+}
 
 @media (max-width: 680px) {
   .filters {

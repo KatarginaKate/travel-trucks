@@ -81,6 +81,11 @@
   font-size: 16px;
   mix-blend-mode: multiply;
 }
+:global(html.dark) .tags span {
+  mix-blend-mode: normal;
+  background: #101414;
+  color: #f4f7f6;
+}
 .moreButton {
   display: inline-flex;
   align-items: center;

@@ -12,6 +12,7 @@
 	--grey-green: #829b91;
 	--olive: #f0f1f1;
 	--green-hover: #6d7b75;
+  --background: #fff;
 
   --font-family: var(--font-inter), sans-serif;
   --second-family: var(--font-manrope), sans-serif;
@@ -31,7 +32,38 @@ body {
 body {
   font-family: var(--font-family);
   color: var(--main);
-  background-color: var(--white);
+  background-color: var(--background);
+  transition: background-color 180ms ease, color 180ms ease;
+}
+
+html.dark {
+  --main: #f4f7f6;
+  --text: #c5cfcc;
+  --white: #f4f7f6;
+  --inputs: #202a28;
+  --badges: #2d3936;
+  --gray: #aab8b3;
+  --gray-light: #52615c;
+  --background: #111816;
+  --olive: #293632;
+  --grey-green: #829b91;
+  --green-hover: #6d7b75;
+}
+
+html.dark .tags span,
+html.dark .feature {
+  mix-blend-mode: normal;
+  background: #101414;
+  color: #a6e3c5;
+}
+
+html.dark .clearButton {
+  background: #f4f7f6;
+  color: #101828;
+}
+
+html.dark .clearButton .icon {
+  stroke: #101828;
 }
 
 .container {

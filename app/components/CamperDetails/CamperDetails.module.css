@@ -1,0 +1,171 @@
+.details {
+  display: flex;
+  align-items: flex-start;
+  gap: 24px;
+}
+.gallery,
+.summary {
+  flex: 1 1 0;
+  min-width: 0;
+}
+.summaryCard,
+.vehicleCard {
+  padding: 24px;
+  border-radius: 12px;
+  background: var(--inputs);
+}
+.vehicleCard {
+  margin-top: 16px;
+}
+.mainSlider {
+  border-radius: 8px;
+}
+.mainSlider img {
+  width: 100%;
+  height: 505px;
+  object-fit: cover;
+}
+.thumbsSlider {
+  margin-top: 27px;
+}
+.thumbsSlider img {
+  width: 100%;
+  border: 3px solid var(--grey-green);
+  border-radius: 16px;
+  object-fit: cover;
+}
+.summary h1 {
+  font-size: 28px;
+  line-height: 1.33;
+}
+.meta {
+  margin-top: 10px;
+  color: var(--gray);
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--rating);
+  vertical-align: middle;
+}
+.icon {
+  width: 16px;
+  height: 16px;
+  fill: var(--rating);
+  vertical-align: middle;
+}
+.price {
+  display: block;
+  margin-top: 16px;
+  font-size: 24px;
+}
+.description {
+  margin-top: 20px;
+  color: var(--text);
+  line-height: 1.5;
+}
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 16px 0 20px;
+  
+}
+.feature {
+  padding: 12px 18px;
+  border-radius: 100px;
+  background: var(--badges);
+}
+:global(html.dark) .feature {
+  background: #101414;
+  color: #f4f7f6;
+}
+.summary h2 {
+  font-size: 20px;
+}
+.specs {
+  margin-top: 16px;
+}
+.specs div {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 0;
+  border-bottom: 1px solid var(--gray-light);
+}
+.specs dt {
+  color: var(--gray);
+}
+.specs dd {
+  font-weight: 500;
+}
+@media (max-width: 800px) {
+  .details {
+    flex-direction: column;
+  }
+  .gallery,
+  .summary {
+    width: 100%;
+  }
+  .mainSlider img {
+    height: 320px;
+  }
+}
+@media (max-width: 1100px) {
+  .details {
+    flex-direction: column;
+  }
+  .gallery,
+  .summary,
+  .summaryCard,
+  .vehicleCard {
+    width: 100%;
+  }
+}
+@media (max-width: 800px) {
+  .details {
+    gap: 16px;
+  }
+  .mainSlider img {
+    height: 320px;
+  }
+  .summaryCard,
+  .vehicleCard {
+    padding: 20px;
+  }
+  .summary h1 {
+    font-size: 24px;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .feature {
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .mainSlider img {
+    height: 240px;
+  }
+  .thumbsSlider {
+    margin-top: 16px;
+  }
+  .thumbsSlider img {
+    height: 72px;
+    border-width: 2px;
+    border-radius: 10px;
+  }
+  .summaryCard,
+  .vehicleCard {
+    padding: 16px;
+  }
+  .summary h1 {
+    font-size: 22px;
+  }
+  .summary h2 {
+    font-size: 18px;
+  }
+  .specs {
+    font-size: 14px;
+  }
+}

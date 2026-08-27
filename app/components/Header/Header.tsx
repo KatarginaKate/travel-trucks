@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Logo from "../common/Logo/Logo";
+import ThemeToggle from "../common/ThemeToggle/ThemeToggle";
 import styles from "./Header.module.css";
 
 export default function Header() {
@@ -16,6 +17,7 @@ export default function Header() {
 						Catalog
 					</Link>
 				</nav>
+				<ThemeToggle />
 			</div>
 		</header>
 	);
