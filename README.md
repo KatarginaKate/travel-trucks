@@ -88,30 +88,6 @@ Open http://localhost:3000 in your browser.
 | `/`                   | Landing page                              |
 | `/catalog`            | Camper catalog and filters                |
 | `/catalog/[camperId]` | Camper details, reviews, and booking form |
-
-## 📁 Project Structure
-
-```text
-app/
-├── catalog/
-│   ├── page.tsx
-│   └── [camperId]/
-│       └── page.tsx
-├── components/
-│   └── Reusable UI components
-├── hooks/
-│   └── Client-side data hooks
-├── lib/
-│   └── API helpers and shared constants
-├── providers/
-│   └── React Query provider
-├── services/
-│   ├── campers.ts
-│   └── booking.ts
-├── types/
-│   └── TypeScript domain types
-└── globals.css
-└── public
 ```
 
 ## 🔌 API Integration
