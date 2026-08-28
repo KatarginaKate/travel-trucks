@@ -17,12 +17,11 @@
   width: min(100% - 72px, 1312px);
   margin: 0 auto;
   color: #fff;
-  text-align: center;
 }
 
 .hero h1 {
   max-width: 620px;
-  margin: 0 auto 16px;
+  margin-bottom: 16px;
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 48px;
@@ -32,7 +31,7 @@
 
 .description {
   max-width: 620px;
-  margin: 0 auto 40px;
+  margin-bottom: 40px;
   font-family: var(--font-family);
   font-weight: 600;
   font-size: 24px;
@@ -73,6 +72,7 @@
 @media (max-width: 700px) {
   .heroContent {
     width: min(100% - 40px, 1312px);
+    text-align: center;
   }
 
   .hero {
@@ -80,12 +80,10 @@
   }
 
   .hero h1 {
-    max-width: 360px;
     font-size: 44px;
   }
 
   .description {
-    max-width: 280px;
     font-size: 16px;
   }
 }
