@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Manrope } from "next/font/google";
-import QueryProvider from "./providers/QueryProvider";
+import QueryProvider from "../providers/QueryProvider";
 import "./globals.css";
 
 const inter = Inter({

@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
-import BookingForm from "../../components/BookingForm/BookingForm";
-import CamperDetails from "../../components/CamperDetails/CamperDetails";
-import Header from "../../components/Header/Header";
-import Reviews from "../../components/Reviews/Reviews";
-import BackButton from "../../components/common/BackButton/BackButton";
-import { fetchCamper, fetchCamperReviews } from "../../services/campers";
+import BookingForm from "../../../components/BookingForm/BookingForm"
+import CamperDetails from "../../../components/CamperDetails/CamperDetails";
+import Header from "../../../components/Header/Header";
+import Reviews from "../../../components/Reviews/Reviews";
+import BackButton from "../../../components/common/BackButton/BackButton";
+import { fetchCamper, fetchCamperReviews } from "../../../services/campers";
 import styles from "./page.module.css";
 
 type CamperPageProps = {

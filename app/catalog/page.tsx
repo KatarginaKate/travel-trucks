@@ -2,16 +2,16 @@
 
 import { FormEvent, useState } from "react";
 
-import Header from "../components/Header/Header";
-import CamperList from "../components/CamperList/CamperList";
-import EmptyState from "../components/EmptyState/EmptyState";
-import Filter from "../components/Filter/Filter";
-import LoadingState from "../components/common/LoadingState/LoadingState";
+import Header from "../../components/Header/Header";
+import CamperList from "../../components/CamperList/CamperList";
+import EmptyState from "../../components/EmptyState/EmptyState";
+import Filter from "../../components/Filter/Filter";
+import LoadingState from "../../components/common/LoadingState/LoadingState";
 
-import { EMPTY_FILTERS } from "../lib/constants";
-import { useCampers } from "../hooks/useCampers";
+import { EMPTY_FILTERS } from "../../lib/constants";
+import { useCampers } from "../../hooks/useCampers";
 
-import type { FilterValues } from "../types/camper";
+import type { FilterValues } from "../../types/camper";
 
 import styles from "./page.module.css";
 
