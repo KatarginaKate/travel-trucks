@@ -48,12 +48,6 @@
   fill: var(--rating);
   vertical-align: middle;
 }
-.icon {
-  width: 16px;
-  height: 16px;
-  fill: var(--rating);
-  vertical-align: middle;
-}
 .price {
   display: block;
   margin-top: 16px;
@@ -101,18 +95,7 @@
 @media (max-width: 800px) {
   .details {
     flex-direction: column;
-  }
-  .gallery,
-  .summary {
-    width: 100%;
-  }
-  .mainSlider img {
-    height: 320px;
-  }
-}
-@media (max-width: 1100px) {
-  .details {
-    flex-direction: column;
+    gap: 16px;
   }
   .gallery,
   .summary,
@@ -120,10 +103,8 @@
   .vehicleCard {
     width: 100%;
   }
-}
-@media (max-width: 800px) {
-  .details {
-    gap: 16px;
+  .mainSlider img {
+    height: 320px;
   }
   .mainSlider img {
     height: 320px;

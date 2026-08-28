@@ -52,9 +52,6 @@
     width: min(100% - 32px, 520px);
     margin-top: 24px;
   }
-  .filters {
-    margin-bottom: 40px;
-  }
   .results h1 {
     font-size: 32px;
   }

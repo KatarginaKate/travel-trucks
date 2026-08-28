@@ -18,9 +18,9 @@
 	height: auto;
 	margin-top: 48px;
 }
-@media (max-width: 800px) {
+@media (max-width: 1100px) {
 	.page {
-		width: min(100% - 32px, 600px);
+		width: min(100% - 48px, 900px);
 		margin-top: 24px;
 	}
 	.bottomSection {
@@ -29,19 +29,6 @@
 	.bottomSection > form {
 		width: 100%;
 		height: auto;
-		flex-basis: auto;
-		margin-top: 0;
-	}
-}
-@media (max-width: 1100px) {
-	.page {
-		width: min(100% - 48px, 900px);
-	}
-	.bottomSection {
-		flex-direction: column;
-	}
-	.bottomSection > form {
-		width: 100%;
 		flex-basis: auto;
 		margin-top: 0;
 	}

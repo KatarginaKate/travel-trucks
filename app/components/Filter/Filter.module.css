@@ -153,5 +153,8 @@
 @media (max-width: 680px) {
   .filters {
     position: static;
+    width: min(100%, 520px);
+    margin-right: auto;
+    margin-left: auto;
   }
 }

@@ -69,7 +69,7 @@ export default function CamperCard({ camper }: CamperCardProps) {
 						{formLabels[camper.form] || formatLabel(camper.form)}
 					</span>
 				</div>
-				<Link className={styles.moreButton} href={`/catalog/${camper.id}`} target="_blank" rel="noopener noreferrer">
+				<Link className={styles.moreButton} href={`/catalog/${camper.id}`}>
 					Show more
 				</Link>
 			</div>
