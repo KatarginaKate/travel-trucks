@@ -6,8 +6,8 @@ type CamperListProps = { campers: Camper[] };
 
 export default function CamperList({ campers }: CamperListProps) {
 	return (
-		<div className={styles.camperList}>
+		<ul className={styles.camperList}>
 			{campers.map((camper) => <CamperCard camper={camper} key={camper.id} />)}
-		</div>
+		</ul>
 	);
 }

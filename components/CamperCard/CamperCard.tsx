@@ -34,7 +34,7 @@ type CamperCardProps = { camper: Camper };
 
 export default function CamperCard({ camper }: CamperCardProps) {
 	return (
-		<article className={styles.card}>
+		<li className={styles.card}>
 			<Image
 				className={styles.cardImage}
 				src={camper.coverImage}
@@ -73,6 +73,6 @@ export default function CamperCard({ camper }: CamperCardProps) {
 					Show more
 				</Link>
 			</div>
-		</article>
+		</li>
 	);
 }

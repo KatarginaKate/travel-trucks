@@ -34,6 +34,9 @@
   border-radius: 16px;
   object-fit: cover;
 }
+:global(.swiper-slide-thumb-active) img {
+  border-color: var(--green-hover);
+}
 .summary h1 {
   font-size: 28px;
   line-height: 1.33;
