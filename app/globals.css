@@ -9,9 +9,9 @@
 	--button: #e44848;
 	--button-hover: #d84343;
 	--rating: #ffc531;
-	--grey-green: #829b91;
+	--grey-green: #52675d;
 	--olive: #f0f1f1;
-	--green-hover: #6d7b75;
+	--green-hover: #40534a;
   --background: #fff;
 
   --font-family: var(--font-inter), sans-serif;
@@ -46,8 +46,8 @@ html.dark {
   --gray-light: #52615c;
   --background: #111816;
   --olive: #293632;
-  --grey-green: #829b91;
-  --green-hover: #6d7b75;
+  --grey-green: #52675d;
+  --green-hover: #40534a;
 }
 
 html.dark .tags span,
@@ -98,4 +98,3 @@ img {
   display: block;
   max-width: 100%;
 }
-

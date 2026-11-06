@@ -56,6 +56,10 @@
 .form textarea:focus {
   border-color: var(--grey-green);
 }
+:global(html.dark) .form input:focus,
+:global(html.dark) .form textarea:focus {
+  border-color: #a6e3c5;
+}
 .form input.invalid {
   border: 1px solid var(--button);
   background: #ffdfdf;
@@ -100,6 +104,9 @@
 .success {
   margin-top: 12px;
   color: var(--grey-green);
+}
+:global(html.dark) .success {
+  color: #a6e3c5;
 }
 .error {
   margin-top: 12px;

@@ -57,6 +57,12 @@
   color: var(--grey-green);
 }
 
+:global(html.dark) .activeLink,
+:global(html.dark) .catalogLink:hover,
+:global(html.dark) .catalogLink:focus-visible {
+  color: #a6e3c5;
+}
+
 @media (max-width: 700px) {
   .inner {
     width: min(100% - 40px, 1312px);

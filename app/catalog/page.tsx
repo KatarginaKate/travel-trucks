@@ -54,6 +54,9 @@ export default function CatalogPage() {
           className={styles.results}
           aria-labelledby="catalog-title"
         >
+          <h1 id="catalog-title" className={styles.visuallyHidden}>
+            Camper catalog
+          </h1>
           {!!campers.length && (
             <div className={styles.resultsHeader}>
               <span className={styles.resultCount}>
