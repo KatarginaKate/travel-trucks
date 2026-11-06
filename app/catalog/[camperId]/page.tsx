@@ -28,7 +28,7 @@ export default async function CamperPage({ params }: CamperPageProps) {
 
   return (
     <>
-      <Header />
+      <Header activePage="catalog" />
       <main className={styles.page}>
         <BackButton />
         <CamperDetails camper={camper} reviewsCount={reviews.length} />

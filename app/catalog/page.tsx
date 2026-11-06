@@ -7,6 +7,7 @@ import CamperList from "../../components/CamperList/CamperList";
 import EmptyState from "../../components/EmptyState/EmptyState";
 import Filter from "../../components/Filter/Filter";
 import LoadingState from "../../components/common/LoadingState/LoadingState";
+import QueryProvider from "../../providers/QueryProvider";
 
 import { EMPTY_FILTERS } from "../../lib/constants";
 import { useCampers } from "../../hooks/useCampers";
@@ -15,7 +16,7 @@ import type { FilterValues } from "../../types/camper";
 
 import styles from "./page.module.css";
 
-export default function CatalogPage() {
+function CatalogContent() {
   const [filters, setFilters] = useState<FilterValues>(EMPTY_FILTERS);
   const [draftFilters, setDraftFilters] =
     useState<FilterValues>(EMPTY_FILTERS);
@@ -40,7 +41,7 @@ export default function CatalogPage() {
 
   return (
     <>
-      <Header />
+      <Header activePage="catalog" />
 
       <main className={styles.catalog}>
         <Filter
@@ -87,5 +88,13 @@ export default function CatalogPage() {
 
       {loading && <LoadingState />}
     </>
+  );
+}
+
+export default function CatalogPage() {
+  return (
+    <QueryProvider>
+      <CatalogContent />
+    </QueryProvider>
   );
 }

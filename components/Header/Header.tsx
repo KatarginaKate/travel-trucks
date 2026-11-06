@@ -1,16 +1,13 @@
-"use client";
-
 import Link from "next/link";
-import { usePathname } from "next/navigation";
 import Logo from "../common/Logo/Logo";
 import ThemeToggle from "../common/ThemeToggle/ThemeToggle";
 import styles from "./Header.module.css";
 
-export default function Header() {
-	const pathname = usePathname();
-	const isHomePage = pathname === "/";
-	const isCatalogPage = pathname === "/catalog" || pathname.startsWith("/catalog/");
+type HeaderProps = {
+	activePage?: "home" | "catalog";
+};
 
+export default function Header({ activePage }: HeaderProps) {
 	return (
 		<header className={styles.header}>
 			<div className={styles.inner}>
@@ -18,16 +15,16 @@ export default function Header() {
 
 				<nav className={styles.navigation} aria-label="Main navigation">
 					<Link
-						className={isHomePage ? styles.activeLink : styles.catalogLink}
+						className={activePage === "home" ? styles.activeLink : styles.catalogLink}
 						href="/"
-						aria-current={isHomePage ? "page" : undefined}
+						aria-current={activePage === "home" ? "page" : undefined}
 					>
 						Home
 					</Link>
 					<Link
-						className={isCatalogPage ? styles.activeLink : styles.catalogLink}
+						className={activePage === "catalog" ? styles.activeLink : styles.catalogLink}
 						href="/catalog"
-						aria-current={isCatalogPage ? "page" : undefined}
+						aria-current={activePage === "catalog" ? "page" : undefined}
 					>
 						Catalog
 					</Link>
