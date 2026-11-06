@@ -1,105 +1,61 @@
-"use client";
-
-import { useMemo, useState } from "react";
 import styles from "./page.module.css";
 
-type DeviceMode = "mobile" | "desktop";
-
-type AuditItem = {
-	label: string;
-	value?: string;
-	severity?: "warning" | "info";
-};
-
-const auditSections: Record<
-	DeviceMode,
-	{ title: string; items: AuditItem[]; note: string }
-> = {
-	mobile: {
-		title: "СТАТИСТИКА",
-		items: [
-			{ label: "Показчте показ зображень", value: "Очікуване заощадження: 1 473 КБ", severity: "warning" },
-			{ label: "Запити, які блокують відображення", value: "Очікуване заощадження: 450 мс", severity: "warning" },
-			{ label: "Застарілі функції JavaScript", value: "Очікуване заощадження: 14 КБ", severity: "warning" },
-			{ label: "Виявлення запитів LCP", severity: "info" },
-			{ label: "Дерево залежностей мережі", severity: "info" },
-			{ label: "Розподіл LCP", severity: "info" },
-		],
-		note: "Ця статистика також доступна на панелі \"Продуктивність\" в Інструментах розробника Chrome. Щоб переглянути докладнішу інформацію, запишіть трасування.",
-	},
-	desktop: {
-		title: "СТАТИСТИКА",
-		items: [
-			{ label: "Показчте показ зображень", value: "Очікуване заощадження: 1 473 КБ", severity: "warning" },
-			{ label: "Запити, які блокують відображення", value: "Очікуване заощадження: 450 мс", severity: "warning" },
-			{ label: "Застарілі функції JavaScript", value: "Очікуване заощадження: 14 КБ", severity: "warning" },
-			{ label: "Виявлення запитів LCP", severity: "info" },
-			{ label: "Дерево залежностей мережі", severity: "info" },
-			{ label: "Розподіл LCP", severity: "info" },
-		],
-		note: "Ця статистика також доступна на панелі \"Продуктивність\" в Інструментах розробника Chrome. Щоб переглянути докладнішу інформацію, запишіть трасування.",
-	},
-} as const;
-
-const diagnostics: AuditItem[] = [
-	{ label: "Зменште код JavaScript, який не використовується", value: "Очікуване заощадження: 29 КБ", severity: "warning" },
-	{ label: "Уникайте тривалих завдань у головному потоці", value: "Знайдено 1 тривале завдання", severity: "info" },
+const ariaIssues = [
+	"Атрибути <span className=\"code\">[aria-*]</span> не відповідають своїм ролям",
+	"В елементах АРІА <span className=\"code\">[role]</span>, які вимагають дочірні елементи з певним атрибутом <span className=\"code\">[role]</span>, немає кількох або всіх дочірніх елементів.",
 ];
 
-export default function Home() {
-	const [deviceMode, setDeviceMode] = useState<DeviceMode>("mobile");
-	const activeSection = useMemo(() => auditSections[deviceMode], [deviceMode]);
+const contrastIssue =
+	"Між кольорами фону та переднього плану недостатній коефіцієнт контрастності.";
 
+export default function Home() {
 	return (
 		<main className={styles.page}>
 			<div className={styles.shell}>
 				<div className={styles.deviceToggle} role="tablist" aria-label="Device type">
-					<button
-						type="button"
-						className={`${styles.modeButton} ${deviceMode === "mobile" ? styles.active : ""}`}
-						onClick={() => setDeviceMode("mobile")}
-						aria-selected={deviceMode === "mobile"}
-					>
+					<button type="button" className={`${styles.modeButton} ${styles.active}`} aria-selected="true">
 						<span className={styles.iconBox} aria-hidden="true" />
 						<span>Мобільний</span>
 					</button>
-					<button
-						type="button"
-						className={`${styles.modeButton} ${deviceMode === "desktop" ? styles.active : ""}`}
-						onClick={() => setDeviceMode("desktop")}
-						aria-selected={deviceMode === "desktop"}
-					>
+					<button type="button" className={styles.modeButton} aria-selected="false">
 						<span className={styles.iconFrame} aria-hidden="true" />
 						<span>Комп'ютер</span>
 					</button>
 				</div>
 
-				<section className={styles.panelSection}>
-					<h2 className={styles.sectionTitle}>{activeSection.title}</h2>
-					<ul className={styles.auditList}>
-						{activeSection.items.map((item: AuditItem) => (
-							<li key={item.label} className={styles.auditItem}>
-								<span className={`${styles.marker} ${item.severity === "warning" ? styles.warning : styles.info}`} aria-hidden="true" />
-								<span className={styles.itemLabel}>{item.label}</span>
-								{item.value ? <span className={styles.itemValue}>{item.value}</span> : null}
+				<section className={styles.section}>
+					<h2 className={styles.sectionTitle}>ARIA</h2>
+					<ul className={styles.list}>
+						{ariaIssues.map((content, index) => (
+							<li key={content} className={styles.listItem}>
+								<span className={styles.marker} aria-hidden="true" />
+								<span
+									dangerouslySetInnerHTML={{
+										__html: content,
+									}}
+									className={styles.itemText}
+								/>
+								<span className={styles.caret} aria-hidden="true" />
 							</li>
 						))}
 					</ul>
-					<p className={styles.inlineNote}>{activeSection.note}</p>
+					<p className={styles.helperText}>
+						Ці рекомендації допоможуть покращити використання ролей ARIA у вашому додатку, що
+						може позитивно вплинути на взаємодію для користувачів допоміжних технологій, як-от
+						програм зміцтування з екрана.
+					</p>
 				</section>
 
-				<section className={styles.panelSection}>
-					<h2 className={styles.sectionTitle}>ДІАГНОСТИКА</h2>
-					<ul className={styles.auditList}>
-						{diagnostics.map((item: AuditItem) => (
-							<li key={item.label} className={styles.auditItem}>
-								<span className={`${styles.marker} ${item.severity === "warning" ? styles.warning : styles.info}`} aria-hidden="true" />
-								<span className={styles.itemLabel}>{item.label}</span>
-								{item.value ? <span className={styles.itemValue}>{item.value}</span> : null}
-							</li>
-						))}
+				<section className={styles.section}>
+					<h2 className={styles.sectionTitle}>КОНТРАСТ</h2>
+					<ul className={styles.list}>
+						<li className={styles.listItem}>
+							<span className={styles.marker} aria-hidden="true" />
+							<span className={styles.itemText}>{contrastIssue}</span>
+							<span className={styles.caret} aria-hidden="true" />
+						</li>
 					</ul>
-					<p className={styles.explanation}>Докладніше про ефективність додача. Ці числа не впливають безпосередньо на значення ефективності.</p>
+					<p className={styles.helperText}>Ці рекомендації допоможуть покращити читабельність вмісту.</p>
 				</section>
 			</div>
 		</main>
